@@ -1,3 +1,7 @@
+// tsc app.js will compile and generate app.js (which is reference in html)
+
+console.log('Your code goes here...');
+
 function add(n1: number, n2: number, showResult: boolean, phrase: string) { //indicate input type (does not transfer to compiled js)
     const result = n1 + n2 //will be treated mathmatically 
     if (showResult) { //is 3rd arg is true
@@ -17,5 +21,3 @@ const result = add(number1, number2, printResult, resultPhrase)
 //---------------------------
 let number3: number; //if using let and not assigning at the time of declaration 
 number3 = 10
-
-            

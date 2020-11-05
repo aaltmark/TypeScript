@@ -1,19 +1,12 @@
-// tsc app.js will compile and generate app.js (which is reference in html)
+//Function Return Types & 'Void' 
 
-console.log('Your code goes here...');
-
-function add(n1: number, n2: number, showResult: boolean, phrase: string) { //indicate input must be #
-    const result = n1 + n2 //will be treated mathmatically 
-    if (showResult) { //is 3rd arg is true
-        console.log(phrase + result) //log correctly 
-    } else {
-        return result; //vs result 
-    }
+function add(n1: number, n2: number): number { //can explicity define return type. not recommended 
+    return n1 + n2; //return type is a number. can be inferred 
 }
 
-const number1 = 5;
-const number2 = 2.8; 
-const printResult = true; 
-const resultPhrase = 'Result is: '; 
+function printResult(num: number) { //return type is 'Void' 
+    console.log( 'Result: ' + num) //because there is no 'return' keyword 
+}
 
-const result = add(number1, number2, printResult, resultPhrase)
+printResult(add(5, 12)); //17 
+console.log(printResult(add(5, 12))) //undefined because of void 
