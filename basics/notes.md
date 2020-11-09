@@ -12,4 +12,10 @@ Core Types
     - Avoid at all costs - takes away all TS advantages 
 - Union: if function needs to accept 2 diff kinds of values 
 - Literal Types: declare exact value variable should hold 
+- Functions kinda 
+    - Function Types
+- Unknown: can store any value without errors 
+    - good if you know what you want to do with the variable later
+    - add a conditional statement to confirm type 
+- Never 
 

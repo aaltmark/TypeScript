@@ -1,16 +1,16 @@
-// tsc app.js will compile and generate app.js (which is reference in html)
-console.log('Your code goes here...');
-function add(n1, n2, showResult, phrase) {
-    var result = n1 + n2; //will be treated mathmatically 
-    if (showResult) { //is 3rd arg is true
-        console.log(phrase + result); //log correctly 
-    }
-    else {
-        return result; //vs result 
-    }
+"use strict";
+//UNKNOWN 
+var userInput;
+var userName;
+//can assign any type without errors 
+userInput = 5;
+userInput = 'Max';
+if (typeof userInput === 'string') {
+    userName = userInput; //needed because input can be any so would cause error 
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = 'Result is: ';
-var result = add(number1, number2, printResult, resultPhrase);
+//NEVER type 
+function generateError(message, code) {
+    throw { message: message, errorCode: code }; //create object with a message and code key that uses parameters 
+}
+var result = generateError('An error occurred', 500); //NEVER products return value 
+console.log(result);
